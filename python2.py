@@ -173,19 +173,20 @@
 #print(a.strip())
 
 
-x = 2
-Y = 2.5*(x**2) + 3.3*x + 6
+#x = 2
+#Y = 2.5*pow(x,2) + 3.3*x + 6
+#print(Y)
 
-print(Y)
+#word1 = input("첫번째 단어: " )
+#word2 = input("두번째 단어: " )
+#word3 = input("세번째 단어: " )
 
+#answer = word1[0] + word2[0] + word3[0] 
 
-a = "park"
-a = a.replace('pr', 'waaaaaaa')
-
-print(a)
-
-
-
+#print("약자 : %s" %(answer))
 
 
+a = (3, (1,2), [1,2,3], "4")
+
+print(len(a))
 
