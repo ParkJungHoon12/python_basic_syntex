@@ -110,11 +110,6 @@
 #print(mySta2)
 
 
-def func():
-   a = 3
-   if a == 3:
-      for i in range(10):
-        i = i + 1
-        j = 10
+insta1 = [1,2,3,4,3,2,1]
 
-print(a)
+print(insta1.pop())
