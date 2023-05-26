@@ -65,11 +65,20 @@ dic1 = { "이름":"홍길동",  "나이":25,  "성별":"남" }
 
 #print(dicta)
 
-a = ["mislav", "stanko", "mislav", "ana"]
-b = ["stanko", "ana", "mislav"]
 
-a.sort()
-b.sort()
+class block_factory:
+    def __init__(self, company, color, shape):
+        self.company = company
+        self.color = color
+        self.shape = shape
 
-print(a)
-print(b)
+    def make_pink(self):
+        self.color = "PINK"
+
+
+
+newblock = block_factory("Gole", "Blue", "Long")
+
+newblock.make_pink()
+
+print("%s %s %s" %(newblock.company, newblock.color, newblock.shape))

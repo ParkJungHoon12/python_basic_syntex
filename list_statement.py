@@ -110,6 +110,48 @@
 #print(mySta2)
 
 
-insta1 = [1,2,3,4,3,2,1]
+# insta1 = [1,2,3,4,3,2,1]
+# print(insta1.pop())
 
-print(insta1.pop())
+
+# 최대값 구하기
+
+
+# 리스트의 최대값을 정렬함수X, 최대값함수X
+# mySwap Func
+def __my_swap(a, i, j):
+    temp = a[i]
+    a[i] = a[j]
+    a[j] =temp
+
+# mySort Func
+def __my_Insertionsort(lista, option = True):
+  ''' Option is True(Default): ascending sorting
+      Option is False : decending sorting'''
+  i = 1
+  max = len(lista)
+
+  while i < max:
+    j = 0
+    while j < i:
+      if option == True and lista[i] < lista[j]: # Acending
+         __my_swap(lista, i, j) 
+      elif option == False and lista[i] > lista[j]: # Decending
+         __my_swap(lista, i, j)
+    
+      j += 1
+    i += 1
+
+# main section
+k = [100, 20, 30, 5, 90, 10000, -1, 2000, 3000, -1000, -5]
+
+help(__my_Insertionsort)
+
+__my_Insertionsort(k)
+print(k)
+
+__my_Insertionsort(k, False)
+print(k)
+
+
+

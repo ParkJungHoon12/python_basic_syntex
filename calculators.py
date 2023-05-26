@@ -12,12 +12,18 @@
 # for 변수 in list:
 #    실행문
 
-def nn(a):
-    b = a*a
-    return b
+class Korea: # 부모
+    def say(self):
+        print("Im from Korea")
+
+class South_Korea: #자식
+    def say1(self):
+        print("Im from South Korea")
 
 
-a = [1,2,3,4,5]
+a = Korea()
+b = South_Korea()
 
 
-print(list(map(nn, a)))
+a.say()
+b.say()
