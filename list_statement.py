@@ -119,39 +119,42 @@
 
 # 리스트의 최대값을 정렬함수X, 최대값함수X
 # mySwap Func
+
 def __my_swap(a, i, j):
     temp = a[i]
     a[i] = a[j]
     a[j] =temp
 
 # mySort Func
-def __my_Insertionsort(lista, option = True):
+def __myselectionsort(lista, option = True):
   ''' Option is True(Default): ascending sorting
       Option is False : decending sorting'''
-  i = 1
+  i = 0
   max = len(lista)
 
   while i < max:
-    j = 0
-    while j < i:
-      if option == True and lista[i] < lista[j]: # Acending
-         __my_swap(lista, i, j) 
-      elif option == False and lista[i] > lista[j]: # Decending
-         __my_swap(lista, i, j)
+    j = i+1
     
+    while j < max:
+      if option == True and lista[i] > lista[j]: # Acending
+         __my_swap(lista, i, j) 
+      elif option == False and lista[i] < lista[j]: # Decending
+         __my_swap(lista, i, j)    
       j += 1
+
     i += 1
 
 # main section
 k = [100, 20, 30, 5, 90, 10000, -1, 2000, 3000, -1000, -5]
 
-help(__my_Insertionsort)
-
-__my_Insertionsort(k)
+__myselectionsort(k)
 print(k)
 
-__my_Insertionsort(k, False)
+__myselectionsort(k, False)
 print(k)
+
+
+
 
 
 

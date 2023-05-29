@@ -66,19 +66,8 @@ dic1 = { "이름":"홍길동",  "나이":25,  "성별":"남" }
 #print(dicta)
 
 
-class block_factory:
-    def __init__(self, company, color, shape):
-        self.company = company
-        self.color = color
-        self.shape = shape
+a = [1,2]
+b = [3,4]
 
-    def make_pink(self):
-        self.color = "PINK"
+print(a+b)
 
-
-
-newblock = block_factory("Gole", "Blue", "Long")
-
-newblock.make_pink()
-
-print("%s %s %s" %(newblock.company, newblock.color, newblock.shape))
