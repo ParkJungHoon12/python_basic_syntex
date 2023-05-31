@@ -1,5 +1,3 @@
-
-
 #Boolean 타입
 # in(또는 not in) 뒤에 iterable한 자료형이 나온다.
 # a in lista, a not in lista, a in dicta, a in seta
@@ -13,8 +11,7 @@
 #    실행문
 
 
-a = [1,2,3,2,1]
+import class_statement.py
 
-print(max(a))
 
 

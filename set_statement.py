@@ -35,11 +35,11 @@ s1.update(s2)
 #print(s2.difference(s1))     # 차집합
 #s1.update(s2)
 
-#set값 삭제시 remove 함수 사용(원본 set에 즉시 업데이트 )
-s1.remove(2)
+#set값 삭제시 remove와 discard 함수 사용(원본 set에 즉시 업데이트 )
+s1.remove(2) # 값이 없으면 에러 발생
 print(s1)
 
-s1.discard(-1)
+s1.discard(-1) # 값이 없으면 에러 미발생
 print(s1)
 
 

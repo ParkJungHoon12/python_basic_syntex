@@ -42,7 +42,20 @@
 #for a in lista:
 #    print(a)
 # range 문법
-for a in range(1,101):
-    print(a)
+
+
+def test1(result):
+    result += 10
+    return result
+
+def test2(result):
+    result += 100
+    return result
+
+a = test1(20)
+b = test2(20)
+
+print(a)
+print(b)
 
 

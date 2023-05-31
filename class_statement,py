@@ -1,0 +1,77 @@
+# 클래스의 사용
+# 1) 같은 기능의 함수의 집합
+# 2)객체를 만들기 위해 사용
+
+# 사칙연산 함수가 있을때, 같은 기능을 하므로, calculator라는 클래스에 모아둘 수 있다.
+# 명명규칙 : 일반적으로 클래스는 대문자 알파벳을 시작으로 쓴다,  변수, 함수명은 소문자로 시작.
+# 함수의 집합으로서 클래스 -> 일반적이지 않는형태 (클래스 내에서 누적된 값을 변수로 갖고있지 않음)
+# 클래스 변수 접근가능 방법1 : 클래스명.변수
+# 방법2 : classmethom 데코레이터 사용
+# class내에 선언된 함수는 메서드라 부른다.
+    
+# 객체란 클래스의 복제본
+# class Calculator:
+    # 객체가 생상될때 init는 가장먼저 실행
+ #    def __init__(self, a):
+  #       self.result = 0
+   # # 클래스 내의 함수의 매개변수가 2개 이상일때
+    # 첫번째 매개변수는 객체를 의미
+  #   def plus(self, a):
+   #      self.result += a
+
+   #  def minus(self, a):
+    #     self.result -= a
+
+   #  def multiply(self, a):
+    #     self.result *= a
+
+ #    def divide(self, a):
+   #      self.result *= a
+
+
+# aCompany = Calculator()
+# aCompany.plus(101)
+
+# bCompany = Calculator()
+# bCompany.plus(100)
+
+# print(aCompany.result)
+# print(bCompany.result)
+
+# persoN이라는 클래스를 만든다.
+# 생성자로 이름(male), 나이, 성별, EMAIL을 받는다.,
+
+#from datetime import datetime
+
+
+#class Person:
+#    def __init__(self, name, age, gender, email):
+#        self.name = name
+#        self.age = age
+#        self.gender = gender
+#        self.email = email
+
+#    def register(self):
+#        self.myinfo = self.name + " " + str(self.age) + " " + self.gender + " " + self.email + " " + str(datetime.now())
+
+# 같은 함수명에 다른 매개변수를 추가한 메서드, 이러한 메스더 추가 방식을 오버로딩이라 한다.
+# 부모한테 있는 기능을 재선언하게 되면, 부모의 기능보다 자식의 기능이 웃너하게 되고, 이는 overriding이라 한다.
+
+class mother:
+
+    result = 5
+
+    def sum(self, a, b):
+        return a + b
+    
+
+class child(mother):
+    def sum(self, a, b):
+        return self.result + a + b + 1
+    
+
+k1 = mother()
+k2 = child()
+
+print(k1.sum(2,3)) 
+print(k2.sum(2,3))

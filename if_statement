@@ -40,9 +40,6 @@ print(hungry(money, hun)) '''
 
 #print(lista)
 
-
-v1 = list(range(1,10))
-
-print(v1)
+# tsm
 
 
