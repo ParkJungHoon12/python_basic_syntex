@@ -22,6 +22,23 @@
  
 # 딕셔너리(자바에서 맵)
 
+def reqersive(answer, n):
+    for i in range(2, n+1):
+        if n % i == 0 and answer.count(i) == 0:
+            answer.append(i) 
+            reqersive(answer, n // i)
+          
 
+answer = []
+reanswer = []
 
-import class_statement
+for k in range(9000, 9001):
+    reqersive(answer, k)
+    
+    for i in answer:
+        if answer.count(i) == 1:
+          reanswer.append(i)
+    reanswer.sort()
+    print(k, reanswer)
+    answer = []
+    reanswer = []

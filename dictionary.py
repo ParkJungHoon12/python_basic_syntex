@@ -65,3 +65,8 @@ dic1 = { "이름":"홍길동",  "나이":25,  "성별":"남" }
 
 #print(dicta)
 
+str1 = " "
+array = [1,2,77,7,7]
+str1 = " ".join(array)
+
+print(str)
