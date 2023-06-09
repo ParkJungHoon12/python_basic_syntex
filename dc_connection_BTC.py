@@ -1,5 +1,5 @@
-# pip install mysq-connector-python
-# mysql, 파이썬 연동 라이브러리
+# 비트코인 가격을 10초마다 크롤링해서 데이터베이스에 저장
+
 import mysql.connector
 import requests
 import json
@@ -11,7 +11,7 @@ try:
         port = "3306", 
         user = "root", 
         password = "1234", 
-        database="practices")
+        database="practices")d
     cursor = connector.cursor()
 
 except mysql.connector.Error as err:

@@ -100,3 +100,32 @@
 # 객체는 힙메모리에 저장디는데, 함수내에서도 접근하여 추가.수정이 가능하다.
 # 스택영역에 있는 지역변수는 함수가 끝나면 휘발되지만, 힙메모리는 휘발되지 않는다.
 
+def solution(keyinput, board):
+    
+    answer = [0,0]
+    
+    dic = {
+        "left"  : [-1,0],
+        "right" : [1,0],
+        "up"    : [0,1],
+        "down"  : [0,-1],
+    }
+    
+    print(board)
+        
+    print(-1*(board[0]//2), board[0]//2)
+    print(-1*(board[1]//2), board[1]//2)
+ 
+
+    for i in keyinput :
+        if -1*(board[0]//2) <= answer[0]  + dic[i][0] <= board[0]//2:
+            if -1*(board[1]//2) <= answer[1] + dic[i][1] <= board[1]//2:
+                answer[0] += dic[i][0]
+                answer[1] += dic[i][1]
+
+
+    return answer
+
+
+print(solution(["down", "down", "down", "down", "down"], [7, 9]))
+    
